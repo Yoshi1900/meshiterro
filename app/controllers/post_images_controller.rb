@@ -12,15 +12,12 @@ class PostImagesController < ApplicationController
   end
 
   def index
+    @post_images = PostImage.all
   end
 
   def show
   end
   
-  def create
-    @post_image = PostImage.new(post_image_params)
-  end
-
   private
 
   def post_image_params
